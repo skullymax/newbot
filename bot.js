@@ -61,7 +61,7 @@ client.on("message", async message => {
         message.channel.send("Check commands here: http://eyzalts.us/alts/bot/");
     }
 
-    if (command === "warn") {
+    if (command === "generate") {
         const embed = new RichEmbed()
             .setColor(0x00AE86)
             .setTimestamp()
