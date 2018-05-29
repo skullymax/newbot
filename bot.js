@@ -58,6 +58,7 @@ client.on("message", async message => {
     };
 
     if (command === "generate") {
+        message.channel.send("**Check your dm!**")
         const embed = new RichEmbed()
             .setColor(0x00AE86)
             .setTimestamp()
