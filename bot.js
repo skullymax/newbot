@@ -57,10 +57,6 @@ client.on("message", async message => {
         return client.channels.get(modlog.id).send({ embed });
     };
 
-    if (command === "help") {
-        message.channel.send("Check commands here: http://eyzalts.us/alts/bot/");
-    }
-
     if (command === "generate") {
         const embed = new RichEmbed()
             .setColor(0x00AE86)
