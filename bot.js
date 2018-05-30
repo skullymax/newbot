@@ -1,8 +1,8 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
-const { caseNumber } = require('./util/caseNumber.js');
 const { RichEmbed } = require('discord.js');
+
 
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
@@ -33,6 +33,17 @@ function altmc() {
     return rand[Math.floor(Math.random() * rand.length)];
 }
 
+function altuplay() {
+    var rand = ['billy-bourne2011@hotmail.com:cooldude123',
+        'salgadomja@gmail.com:88demayo',
+        'jdp3bengalz85@gmail.com:baseball23',
+        'matts4242@gmail.com:wingspan91',
+        'apdshanrra50@gmail.com:Pavel2002',
+        'r.peckham@hotmail.co.uk:bongo1996'];
+
+    return rand[Math.floor(Math.random() * rand.length)];
+}
+
 client.on("message", async message => {
 
     if (message.author.bot) return;
@@ -56,14 +67,28 @@ client.on("message", async message => {
         return message.channel.send({ embed });
     }
 
+    if (command === "ugenerate") {
+        message.channel.send("**Check your dm**")
+        const embed = new RichEmbed()
+            .setColor(0x5C0E60)
+            .setTimestamp()
+            .setTitle(":tada: Generated Account! :tada:")
+            .addField("Account info:", `Account:\nType: Uplay`, true)
+            .addField("Storage: 6", (altuplay()), true)
+            .setURL("https://discord.gg/QDkPV92")
+            .setFooter(`Made by skullymax`);
+        return message.author.send({ embed });
+    }
+
     if (command === "generate") {
         message.channel.send("**Check your dm**")
         const embed = new RichEmbed()
             .setColor(0x5C0E60)
             .setTimestamp()
-            .setTitle("Info")
-            .setDescription("Support by joining to: https://discord.gg/QDkPV92")
-            .addField("Minecraft:", (altmc()), true)
+            .setTitle(":tada: Generated Account! :tada:")
+            .addField("Account info:", `Account:\nType: Minecraft`, true)
+            .addField("Storage: 9", (altmc()), true)
+            .setURL("https://discord.gg/QDkPV92")
             .setFooter(`Made by skullymax`);
         return message.author.send({ embed });
     }
