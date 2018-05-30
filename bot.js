@@ -57,7 +57,7 @@ client.on("message", async message => {
     }
 
     if (command === "generate") {
-        message.channel.send("Check your dm")
+        message.channel.send("**Check your dm**")
         const embed = new RichEmbed()
             .setColor(0x5C0E60)
             .setTimestamp()
