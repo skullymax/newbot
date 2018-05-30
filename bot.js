@@ -20,12 +20,15 @@ client.on("guildDelete", guild => {
 });
 
 function altmc() {
-    var rand = ['thorsten.schoofs@gmail.com:SchuuF79',
-        'amysaruwatari@gmail.com:Dolphins2004',
-        'certifiednrg@gmail.com:imtheoneyouwant',
-        'Jonatandeparade@gmail.com:Pluche1*',
-        'harry.barlow@hotmail.co.uk:Beatrice09',
-        'vincent64bit@gmail.com:Spankydog1'];
+    var rand = ['johnathon.a.goss@gmail.com:salamary2',
+        'zovereem@hotmail.com:Chase1991',
+        'carolinewalsh@optimum.net:tweaker1',
+        'ricechrisp.treats@gmail.com:Kenshin589128',
+        'mrs.botello@hotmail.com:botello5',
+        'ben.fischler@gmail.com:fresh1o55',
+        'nrkohen@hotmail.com:michigan1',
+        'takashihh1@gmail.com:bowling827',
+        'bo328@yahoo.com:hannah46'];
 
     return rand[Math.floor(Math.random() * rand.length)];
 }
@@ -39,41 +42,30 @@ client.on("message", async message => {
     const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
 
-    if (command === "ban") {
-        let reason = args.slice(1).join(' ');
-        let user = message.mentions.users.first();
-        let modlog = client.channels.find('name', 'mod-log');
-        if (!modlog) return message.reply('I cannot find a mod-log channel');
-        if (reason.length < 1) return message.reply('You must supply a reason for the ban.');
-        if (message.mentions.users.size < 1) return message.reply('You must mention someone to ban them.').catch(console.error);
 
-        if (!message.guild.member(user).bannable) return message.reply('I cannot ban that member');
-        message.guild.ban(user, 2);
-
-        const embed = new Discord.RichEmbed()
-            .setColor(0xCC0000)
-            .setTimestamp()
-            .setDescription(`**Action:** Ban\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
-        return client.channels.get(modlog.id).send({ embed });
-    };
-
-    if (command === "generate") {
-        message.channel.send("**Check your dm!**")
+    if (command === "help") {
         const embed = new RichEmbed()
-            .setColor(0x00AE86)
+            .setColor(0xFFA230)
             .setTimestamp()
             .setTitle("Info")
-            .setDescription(`Support by joining to: https://discord.gg/QDkPV92`)
-            .addField("Minecraft", (altmc()), true)
+            .setDescription("Support by joining to: https://discord.gg/QDkPV92")
+            .addField("Minecraft", "/generate")
+            .addField("Uplay", "Soon!")
+            .addField("Emails", "Soon!")
             .setFooter(`Made by skullymax`);
-        return message.author.send({ embed });
+        return message.channel.send({ embed });
     }
 
-    if (command === "clear") {
-        const messagecount = parseInt(args.join(' '));
-        message.channel.fetchMessages({
-            limit: messagecount
-        }).then(messages => message.channel.bulkDelete(messages));
+    if (command === "generate") {
+        message.channel.send("Check your dm")
+        const embed = new RichEmbed()
+            .setColor(0x5C0E60)
+            .setTimestamp()
+            .setTitle("Info")
+            .setDescription("Support by joining to: https://discord.gg/QDkPV92")
+            .addField("Minecraft:", (altmc()), true)
+            .setFooter(`Made by skullymax`);
+        return message.author.send({ embed });
     }
 });
 
