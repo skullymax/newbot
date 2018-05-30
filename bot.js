@@ -61,7 +61,7 @@ client.on("message", async message => {
             .setTitle("Info")
             .setDescription("Support by joining to: https://discord.gg/QDkPV92")
             .addField("Minecraft", "/generate")
-            .addField("Uplay", "Soon!")
+            .addField("Uplay", "/ugenerate")
             .addField("Emails", "Soon!")
             .setFooter(`Made by skullymax`);
         return message.channel.send({ embed });
