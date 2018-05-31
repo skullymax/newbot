@@ -73,10 +73,8 @@ client.on("message", async message => {
     if (command === "invite") {
         const embed = new RichEmbed()
             .setColor(0xFFA230)
-            .setTimestamp()
             .setTitle(":tada: CLICK HERE! :tada:")
             .setURL("https://discordapp.com/oauth2/authorize?client_id=451127834895843348&scope=bot&permissions=8")
-            .setFooter(`Made by skullymax`);
         return message.channel.send({ embed });
     }
 
