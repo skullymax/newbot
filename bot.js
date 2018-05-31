@@ -93,6 +93,7 @@ client.on("message", async message => {
 
     if (command === "minecraft") {
         message.channel.send(`:tada: Generated Minecraft Account for **${message.author.tag}**:tada:`)
+        message.author.send(`Try new forum with cracking tutorial! http://eyzalts.us/alts/index.php`)
         const embed = new RichEmbed()
             .setColor(0x5C0E60)
             .setTimestamp()
