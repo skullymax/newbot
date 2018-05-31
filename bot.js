@@ -7,7 +7,7 @@ const fs = require("fs");
 
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-    client.user.setActivity(`/help | BEST ALT BOT`);
+    client.user.setActivity(`/help | Storage 15 Alts`);
 });
 
 client.on("guildCreate", guild => {
