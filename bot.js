@@ -2,11 +2,12 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 const config = require("./config.json");
 const { RichEmbed } = require('discord.js');
+const fs = require("fs");
 
 
 client.on("ready", () => {
     console.log(`Bot has started, with ${client.users.size} users, in ${client.channels.size} channels of ${client.guilds.size} guilds.`);
-    client.user.setActivity(`Serving ${client.guilds.size} servers`);
+    client.user.setActivity(`/help | BEST ALT BOT`);
 });
 
 client.on("guildCreate", guild => {
@@ -20,15 +21,15 @@ client.on("guildDelete", guild => {
 });
 
 function altmc() {
-    var rand = ['atman3353@gmail.com:antho3349',
-        'reesphillips@hotmail.com:bluetooth87',
-        'lausen13@live.dk:lausen99',
-        'clesyshyn@aol.com:fr33runner',
-        'peachu7@gmail.com:shaymin17',
-        'taeganvanheerden@gmail.com:Taegan123',
-        'kristina_georgsson@yahoo.se:Vinter15',
-        'dodo.prinz21@gmail.com:Dorian1234',
-        'sanchezmiguel003@gmail.com:cabala123'];
+    var rand = ['ServantGavin@yahoo.com:starcraft123',
+        'przydworcowe@interia.eu:fzbsida5',
+        'adonisc53@gmail.com:1Bowling',
+        'donald.daniels@live.com:rascal69 ',
+        'ptitclem@gmail.com:clemmm ',
+        'ahbab99@gmail.com:999ahbab9',
+        'patrick-wiederstein@gmx.at:satan1234',
+        'rdwgamer@gmail.com:pegleg',
+        'francois.potgieter4111@gmail.com:781226Tallyho '];
 
     return rand[Math.floor(Math.random() * rand.length)];
 }
@@ -58,17 +59,29 @@ client.on("message", async message => {
         const embed = new RichEmbed()
             .setColor(0xFFA230)
             .setTimestamp()
-            .setTitle("Info")
-            .setDescription("Support by joining to: https://discord.gg/QDkPV92")
-            .addField("Minecraft", "/generate")
-            .addField("Uplay", "/ugenerate")
+            .setTitle(":tada: BOT INFO! :tada:")
+            .setURL("https://discord.gg/QDkPV92")
+            .addField("Minecraft", "/minecraft")
+            .addField("Uplay", "/uplay")
+            .addField("Invite bot", "/invite")
             .addField("Emails", "Soon!")
+            .addField("Online on", `${client.guilds.size}`)
             .setFooter(`Made by skullymax`);
         return message.channel.send({ embed });
     }
 
-    if (command === "ugenerate") {
-        message.channel.send("**Check your dm**")
+    if (command === "invite") {
+        const embed = new RichEmbed()
+            .setColor(0xFFA230)
+            .setTimestamp()
+            .setTitle(":tada: CLICK HERE! :tada:")
+            .setURL("https://discordapp.com/oauth2/authorize?client_id=451127834895843348&scope=bot&permissions=8")
+            .setFooter(`Made by skullymax`);
+        return message.channel.send({ embed });
+    }
+
+    if (command === "uplay") {
+        message.channel.send(`:tada: Generated Uplay Account for **${message.author.tag}**:tada:`)
         const embed = new RichEmbed()
             .setColor(0x5C0E60)
             .setTimestamp()
@@ -80,8 +93,8 @@ client.on("message", async message => {
         return message.author.send({ embed });
     }
 
-    if (command === "generate") {
-        message.channel.send("**Check your dm**")
+    if (command === "minecraft") {
+        message.channel.send(`:tada: Generated Minecraft Account for **${message.author.tag}**:tada:`)
         const embed = new RichEmbed()
             .setColor(0x5C0E60)
             .setTimestamp()
