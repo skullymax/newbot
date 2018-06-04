@@ -21,15 +21,15 @@ client.on("guildDelete", guild => {
 });
 
 function altmc() {
-    var rand = ['scootinbildo@gmail.com:wanderson18',
-        '96svtjsb@gmail.com:jsbaem0823',
-        'steve_moss@hotmail.com:stephen70401',
-        'poulainstephane@yahoo.fr:fifille1',
-        'amyxx25@yahoo.com:iloveyou2',
-        'ebhunter@comcast.net:2Blessed',
-        'mason.p.harding@gmail.com:mharding59',
-        'mnieckula@yahoo.com:graalfox87',
-        'anders99@live.no:Pusenmin99'];
+    var rand = ['dookmeyer@gmail.com:King4848',
+        'johannesschumann2@gmail.com:Johannes1',
+        'jalynwalsh29@gmail.com:Jalyn2006',
+        'vic2marre@gmail.com:cherub99',
+        'francois.potgieter4111@gmail.com:781226Tallyho',
+        'jolabaca@gmail.com:2001leon',
+        'andy.cheng618@gmail.com:a1n2d3y45',
+        'zacharytovar2013@gmail.com:football12',
+        'louis-9@live.fr:loulouvivi'];
 
     return rand[Math.floor(Math.random() * rand.length)];
 }
