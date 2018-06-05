@@ -74,7 +74,7 @@ client.on("message", async message => {
         const embed = new RichEmbed()
             .setColor(0xFFA230)
             .setTitle(":tada: CLICK HERE! :tada:")
-            .setURL("https://discordapp.com/oauth2/authorize?client_id=451127834895843348&scope=bot&permissions=8")
+            .setURL(" https://discordapp.com/oauth2/authorize?client_id=453514635119820816&scope=bot&permissions=66137103")
         return message.channel.send({ embed });
     }
 
