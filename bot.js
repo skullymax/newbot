@@ -60,7 +60,7 @@ client.on("message", async message => {
             .setColor(0xFFA230)
             .setTimestamp()
             .setTitle(":tada: BOT INFO! :tada:")
-            .setURL("https://discord.gg/QDkPV92")
+            .setURL("https://discord.gg/DUHTkuu")
             .addField("Minecraft", "/minecraft")
             .addField("Uplay", "/uplay")
             .addField("Invite bot", "/invite")
@@ -86,7 +86,7 @@ client.on("message", async message => {
             .setTitle(":tada: Generated Account! :tada:")
             .addField("Account info:", `Account:\nType: Uplay`, true)
             .addField("Storage: 6", (altuplay()), true)
-            .setURL("https://discord.gg/QDkPV92")
+            .setURL("https://discord.gg/DUHTkuu")
             .setFooter(`Made by skullymax`);
         return message.author.send({ embed });
     }
@@ -100,7 +100,7 @@ client.on("message", async message => {
             .setTitle(":tada: Generated Account! :tada:")
             .addField("Account info:", `Account:\nType: Minecraft`, true)
             .addField("Storage: 9", (altmc()), true)
-            .setURL("https://discord.gg/QDkPV92")
+            .setURL("https://discord.gg/DUHTkuu")
             .setFooter(`Made by skullymax`);
         return message.author.send({ embed });
     }
