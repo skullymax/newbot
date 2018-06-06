@@ -93,7 +93,7 @@ client.on("message", async message => {
 
     if (command === "minecraft") {
         message.channel.send(`:tada: Generated Minecraft Account for **${message.author.tag}**:tada:`)
-        message.author.send(`My account (skullymax) got disabled for forever and discord server is deleted so if you want help me join to: https://discord.gg/DUHTkuu`)
+        message.author.send(`Check Forum https://eyzalts.us`)
         const embed = new RichEmbed()
             .setColor(0x5C0E60)
             .setTimestamp()
