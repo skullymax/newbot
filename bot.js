@@ -22,10 +22,10 @@ client.on("guildDelete", guild => {
 
 function altmc() {
     var rand = ['sebastian-stille@web.de:vanessa123a1',
-        'knowlertyler@gmail.com:Kristin1981',
+        'caleblee1@outlook.com:a1shton25',
         'phoenix009@hotmail.fr:kevin091090',
         'bherzhauser@gmail.com:bth052593',
-        'billymicrosip@gmail.com:Billy1973',
+        'xboxthisisit@gmail.com:Blee1234',
         'mnwpascual@yahoo.com:Snorlax98',
         'alvarosuarezballon@gmail.com:Amiga1200',
         'zoo_faith@yahoo.com:justin22',
