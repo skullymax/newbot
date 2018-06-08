@@ -29,7 +29,7 @@ function altmc() {
         'mnwpascual@yahoo.com:Snorlax98',
         'alvarosuarezballon@gmail.com:Amiga1200',
         'zoo_faith@yahoo.com:justin22',
-        'betsycatalano@me.com:owllover123'];
+        'davidfranks56@gmail.com:Seagulls1'];
 
     return rand[Math.floor(Math.random() * rand.length)];
 }
